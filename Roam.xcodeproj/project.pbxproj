@@ -25,6 +25,10 @@
 		99EE4B631A04983500F9B7CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B611A04983500F9B7CF /* LaunchScreen.xib */; };
 		99EE4B6F1A04983500F9B7CF /* RoamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B6E1A04983500F9B7CF /* RoamTests.swift */; };
 		99EE4C031A04A05300F9B7CF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99EE4C021A04A05300F9B7CF /* Parse.framework */; };
+		E05EB6681A04B37800A52458 /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB6671A04B37800A52458 /* VerticalScrollView.swift */; };
+		E05EB66A1A04B3B000A52458 /* ClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB6691A04B3B000A52458 /* ClipView.swift */; };
+		E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66B1A04B3D700A52458 /* CardScrollView.swift */; };
+		E05EB66E1A04B3E800A52458 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66D1A04B3E800A52458 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		99EE4B6D1A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B6E1A04983500F9B7CF /* RoamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamTests.swift; sourceTree = "<group>"; };
 		99EE4C021A04A05300F9B7CF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E05EB6671A04B37800A52458 /* VerticalScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
+		E05EB6691A04B3B000A52458 /* ClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipView.swift; sourceTree = "<group>"; };
+		E05EB66B1A04B3D700A52458 /* CardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
+		E05EB66D1A04B3E800A52458 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,10 @@
 			children = (
 				99EE4B581A04983500F9B7CF /* AppDelegate.swift */,
 				99EE4B5A1A04983500F9B7CF /* ViewController.swift */,
+				E05EB6671A04B37800A52458 /* VerticalScrollView.swift */,
+				E05EB6691A04B3B000A52458 /* ClipView.swift */,
+				E05EB66B1A04B3D700A52458 /* CardScrollView.swift */,
+				E05EB66D1A04B3E800A52458 /* Card.swift */,
 				99EE4B5C1A04983500F9B7CF /* Main.storyboard */,
 				99EE4B5F1A04983500F9B7CF /* Images.xcassets */,
 				99EE4B611A04983500F9B7CF /* LaunchScreen.xib */,
@@ -217,6 +229,7 @@
 				TargetAttributes = {
 					99EE4B521A04983500F9B7CF = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5FXE8NKT6P;
 					};
 					99EE4B671A04983500F9B7CF = {
 						CreatedOnToolsVersion = 6.1;
@@ -268,6 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */,
+				E05EB66E1A04B3E800A52458 /* Card.swift in Sources */,
+				E05EB66A1A04B3B000A52458 /* ClipView.swift in Sources */,
+				E05EB6681A04B37800A52458 /* VerticalScrollView.swift in Sources */,
 				99EE4B5B1A04983500F9B7CF /* ViewController.swift in Sources */,
 				99EE4B591A04983500F9B7CF /* AppDelegate.swift in Sources */,
 			);
@@ -392,6 +409,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Roam/parse-library",
@@ -400,6 +419,7 @@
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,6 +427,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Roam/parse-library",
@@ -415,6 +437,7 @@
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
