@@ -29,6 +29,7 @@
 		E05EB66A1A04B3B000A52458 /* ClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB6691A04B3B000A52458 /* ClipView.swift */; };
 		E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66B1A04B3D700A52458 /* CardScrollView.swift */; };
 		E05EB66E1A04B3E800A52458 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66D1A04B3E800A52458 /* Card.swift */; };
+		E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66F1A0505FB00A52458 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		E05EB6691A04B3B000A52458 /* ClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipView.swift; sourceTree = "<group>"; };
 		E05EB66B1A04B3D700A52458 /* CardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
 		E05EB66D1A04B3E800A52458 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E05EB66F1A0505FB00A52458 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				99EE4B581A04983500F9B7CF /* AppDelegate.swift */,
+				E05EB66F1A0505FB00A52458 /* LoginViewController.swift */,
 				99EE4B5A1A04983500F9B7CF /* ViewController.swift */,
 				E05EB6671A04B37800A52458 /* VerticalScrollView.swift */,
 				E05EB6691A04B3B000A52458 /* ClipView.swift */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */,
 				E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */,
 				E05EB66E1A04B3E800A52458 /* Card.swift in Sources */,
 				E05EB66A1A04B3B000A52458 /* ClipView.swift in Sources */,
