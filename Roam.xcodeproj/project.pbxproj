@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99A349471A04A148006E15AF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349451A04A134006E15AF /* SystemConfiguration.framework */; };
+		99A349481A04A148006E15AF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349431A04A12D006E15AF /* StoreKit.framework */; };
+		99A349491A04A148006E15AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349411A04A126006E15AF /* Security.framework */; };
+		99A3494A1A04A148006E15AF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A3493F1A04A120006E15AF /* QuartzCore.framework */; };
+		99A3494B1A04A148006E15AF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A3493D1A04A11A006E15AF /* MobileCoreServices.framework */; };
+		99A3494C1A04A148006E15AF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A3493B1A04A112006E15AF /* libz.dylib */; };
+		99A3494D1A04A148006E15AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349391A04A107006E15AF /* CoreLocation.framework */; };
+		99A3494E1A04A148006E15AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349371A04A102006E15AF /* CoreGraphics.framework */; };
+		99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349351A04A0DA006E15AF /* CFNetwork.framework */; };
+		99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349331A04A0D4006E15AF /* AudioToolbox.framework */; };
+		99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349511A04A5E6006E15AF /* Bolts.framework */; };
 		99EE4B591A04983500F9B7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B581A04983500F9B7CF /* AppDelegate.swift */; };
 		99EE4B5B1A04983500F9B7CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B5A1A04983500F9B7CF /* ViewController.swift */; };
 		99EE4B5E1A04983500F9B7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B5C1A04983500F9B7CF /* Main.storyboard */; };
 		99EE4B601A04983500F9B7CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B5F1A04983500F9B7CF /* Images.xcassets */; };
 		99EE4B631A04983500F9B7CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B611A04983500F9B7CF /* LaunchScreen.xib */; };
 		99EE4B6F1A04983500F9B7CF /* RoamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B6E1A04983500F9B7CF /* RoamTests.swift */; };
+		99EE4C031A04A05300F9B7CF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99EE4C021A04A05300F9B7CF /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99A349331A04A0D4006E15AF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		99A349351A04A0DA006E15AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		99A349371A04A102006E15AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		99A349391A04A107006E15AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		99A3493B1A04A112006E15AF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		99A3493D1A04A11A006E15AF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		99A3493F1A04A120006E15AF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		99A349411A04A126006E15AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		99A349431A04A12D006E15AF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		99A349451A04A134006E15AF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		99A349511A04A5E6006E15AF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		99EE4B531A04983500F9B7CF /* Roam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE4B571A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B581A04983500F9B7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +59,7 @@
 		99EE4B681A04983500F9B7CF /* RoamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE4B6D1A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B6E1A04983500F9B7CF /* RoamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamTests.swift; sourceTree = "<group>"; };
+		99EE4C021A04A05300F9B7CF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +67,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A349471A04A148006E15AF /* SystemConfiguration.framework in Frameworks */,
+				99A349481A04A148006E15AF /* StoreKit.framework in Frameworks */,
+				99A349491A04A148006E15AF /* Security.framework in Frameworks */,
+				99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */,
+				99A3494A1A04A148006E15AF /* QuartzCore.framework in Frameworks */,
+				99A3494B1A04A148006E15AF /* MobileCoreServices.framework in Frameworks */,
+				99A3494C1A04A148006E15AF /* libz.dylib in Frameworks */,
+				99A3494D1A04A148006E15AF /* CoreLocation.framework in Frameworks */,
+				99A3494E1A04A148006E15AF /* CoreGraphics.framework in Frameworks */,
+				99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */,
+				99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */,
+				99EE4C031A04A05300F9B7CF /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +126,7 @@
 		99EE4B561A04983500F9B7CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99EE4BFA1A049FFE00F9B7CF /* Frameworks */,
 				99EE4B571A04983500F9B7CF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +147,25 @@
 				99EE4B6D1A04983500F9B7CF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99EE4BFA1A049FFE00F9B7CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99A349511A04A5E6006E15AF /* Bolts.framework */,
+				99A349451A04A134006E15AF /* SystemConfiguration.framework */,
+				99A349431A04A12D006E15AF /* StoreKit.framework */,
+				99A349411A04A126006E15AF /* Security.framework */,
+				99A3493F1A04A120006E15AF /* QuartzCore.framework */,
+				99A3493D1A04A11A006E15AF /* MobileCoreServices.framework */,
+				99A3493B1A04A112006E15AF /* libz.dylib */,
+				99A349391A04A107006E15AF /* CoreLocation.framework */,
+				99A349371A04A102006E15AF /* CoreGraphics.framework */,
+				99A349351A04A0DA006E15AF /* CFNetwork.framework */,
+				99A349331A04A0D4006E15AF /* AudioToolbox.framework */,
+				99EE4C021A04A05300F9B7CF /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +392,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Roam/parse-library",
+					"$(PROJECT_DIR)/Roam",
+				);
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +407,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Roam/parse-library",
+					"$(PROJECT_DIR)/Roam",
+				);
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +471,7 @@
 				99EE4B741A04983500F9B7CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99EE4B751A04983500F9B7CF /* Build configuration list for PBXNativeTarget "RoamTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +480,7 @@
 				99EE4B771A04983500F9B7CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

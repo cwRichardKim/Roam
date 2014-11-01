@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var testObject = PFObject(className: "TestObject")
+        testObject.setObject("TEST", forKey: "testKey")
+        testObject.saveInBackgroundWithBlock(nil)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
