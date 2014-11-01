@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993451F11A05353000178444 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993451F01A05353000178444 /* ParseFacebookUtils.framework */; };
 		99A349471A04A148006E15AF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349451A04A134006E15AF /* SystemConfiguration.framework */; };
 		99A349481A04A148006E15AF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349431A04A12D006E15AF /* StoreKit.framework */; };
 		99A349491A04A148006E15AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349411A04A126006E15AF /* Security.framework */; };
@@ -18,6 +19,7 @@
 		99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349351A04A0DA006E15AF /* CFNetwork.framework */; };
 		99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349331A04A0D4006E15AF /* AudioToolbox.framework */; };
 		99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349511A04A5E6006E15AF /* Bolts.framework */; };
+		99A349581A0521B2006E15AF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349571A0521B2006E15AF /* FacebookSDK.framework */; };
 		99EE4B591A04983500F9B7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B581A04983500F9B7CF /* AppDelegate.swift */; };
 		99EE4B5B1A04983500F9B7CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B5A1A04983500F9B7CF /* ViewController.swift */; };
 		99EE4B5E1A04983500F9B7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B5C1A04983500F9B7CF /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		993451ED1A05342C00178444 /* Roam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Roam-Bridging-Header.h"; sourceTree = "<group>"; };
+		993451F01A05353000178444 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		99A349331A04A0D4006E15AF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		99A349351A04A0DA006E15AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		99A349371A04A102006E15AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +58,7 @@
 		99A349431A04A12D006E15AF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		99A349451A04A134006E15AF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		99A349511A04A5E6006E15AF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		99A349571A0521B2006E15AF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		99EE4B531A04983500F9B7CF /* Roam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE4B571A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B581A04983500F9B7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993451F11A05353000178444 /* ParseFacebookUtils.framework in Frameworks */,
 				99A349471A04A148006E15AF /* SystemConfiguration.framework in Frameworks */,
 				99A349481A04A148006E15AF /* StoreKit.framework in Frameworks */,
 				99A349491A04A148006E15AF /* Security.framework in Frameworks */,
@@ -85,6 +91,7 @@
 				99A3494B1A04A148006E15AF /* MobileCoreServices.framework in Frameworks */,
 				99A3494C1A04A148006E15AF /* libz.dylib in Frameworks */,
 				99A3494D1A04A148006E15AF /* CoreLocation.framework in Frameworks */,
+				99A349581A0521B2006E15AF /* FacebookSDK.framework in Frameworks */,
 				99A3494E1A04A148006E15AF /* CoreGraphics.framework in Frameworks */,
 				99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */,
 				99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */,
@@ -108,6 +115,7 @@
 				99EE4B551A04983500F9B7CF /* Roam */,
 				99EE4B6B1A04983500F9B7CF /* RoamTests */,
 				99EE4B541A04983500F9B7CF /* Products */,
+				993451ED1A05342C00178444 /* Roam-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +134,9 @@
 				99EE4B581A04983500F9B7CF /* AppDelegate.swift */,
 				E05EB66F1A0505FB00A52458 /* LoginViewController.swift */,
 				99EE4B5A1A04983500F9B7CF /* ViewController.swift */,
+				E05EB66B1A04B3D700A52458 /* CardScrollView.swift */,
 				E05EB6671A04B37800A52458 /* VerticalScrollView.swift */,
 				E05EB6691A04B3B000A52458 /* ClipView.swift */,
-				E05EB66B1A04B3D700A52458 /* CardScrollView.swift */,
 				E05EB66D1A04B3E800A52458 /* Card.swift */,
 				99EE4B5C1A04983500F9B7CF /* Main.storyboard */,
 				99EE4B5F1A04983500F9B7CF /* Images.xcassets */,
@@ -167,6 +175,8 @@
 		99EE4BFA1A049FFE00F9B7CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				993451F01A05353000178444 /* ParseFacebookUtils.framework */,
+				99A349571A0521B2006E15AF /* FacebookSDK.framework */,
 				99A349511A04A5E6006E15AF /* Bolts.framework */,
 				99A349451A04A134006E15AF /* SystemConfiguration.framework */,
 				99A349431A04A12D006E15AF /* StoreKit.framework */,
@@ -413,17 +423,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Roam/parse-library",
 					"$(PROJECT_DIR)/Roam",
+					/Users/cwrichardkim93/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Roam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -431,17 +445,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Roam/parse-library",
 					"$(PROJECT_DIR)/Roam",
+					/Users/cwrichardkim93/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Roam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Roam-Bridging-Header.h";
 			};
 			name = Release;
 		};
