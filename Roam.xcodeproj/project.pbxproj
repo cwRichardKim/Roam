@@ -19,7 +19,6 @@
 		99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349351A04A0DA006E15AF /* CFNetwork.framework */; };
 		99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349331A04A0D4006E15AF /* AudioToolbox.framework */; };
 		99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349511A04A5E6006E15AF /* Bolts.framework */; };
-		99A349581A0521B2006E15AF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349571A0521B2006E15AF /* FacebookSDK.framework */; };
 		99EE4B591A04983500F9B7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B581A04983500F9B7CF /* AppDelegate.swift */; };
 		99EE4B5B1A04983500F9B7CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B5A1A04983500F9B7CF /* ViewController.swift */; };
 		99EE4B5E1A04983500F9B7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B5C1A04983500F9B7CF /* Main.storyboard */; };
@@ -32,6 +31,7 @@
 		E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66B1A04B3D700A52458 /* CardScrollView.swift */; };
 		E05EB66E1A04B3E800A52458 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66D1A04B3E800A52458 /* Card.swift */; };
 		E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66F1A0505FB00A52458 /* LoginViewController.swift */; };
+		E05EB6F71A05620800A52458 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EB6F61A05620800A52458 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		99A349431A04A12D006E15AF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		99A349451A04A134006E15AF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		99A349511A04A5E6006E15AF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		99A349571A0521B2006E15AF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		99EE4B531A04983500F9B7CF /* Roam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE4B571A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B581A04983500F9B7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		E05EB66B1A04B3D700A52458 /* CardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
 		E05EB66D1A04B3E800A52458 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E05EB66F1A0505FB00A52458 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E05EB6F61A05620800A52458 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +91,11 @@
 				99A3494B1A04A148006E15AF /* MobileCoreServices.framework in Frameworks */,
 				99A3494C1A04A148006E15AF /* libz.dylib in Frameworks */,
 				99A3494D1A04A148006E15AF /* CoreLocation.framework in Frameworks */,
-				99A349581A0521B2006E15AF /* FacebookSDK.framework in Frameworks */,
 				99A3494E1A04A148006E15AF /* CoreGraphics.framework in Frameworks */,
 				99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */,
 				99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */,
 				99EE4C031A04A05300F9B7CF /* Parse.framework in Frameworks */,
+				E05EB6F71A05620800A52458 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +175,8 @@
 		99EE4BFA1A049FFE00F9B7CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E05EB6F61A05620800A52458 /* FacebookSDK.framework */,
 				993451F01A05353000178444 /* ParseFacebookUtils.framework */,
-				99A349571A0521B2006E15AF /* FacebookSDK.framework */,
 				99A349511A04A5E6006E15AF /* Bolts.framework */,
 				99A349451A04A134006E15AF /* SystemConfiguration.framework */,
 				99A349431A04A12D006E15AF /* StoreKit.framework */,

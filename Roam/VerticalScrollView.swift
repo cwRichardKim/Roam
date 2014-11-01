@@ -12,12 +12,13 @@ import UIKit
 class VerticalScrollView: UIScrollView, UIScrollViewDelegate {
     
     var card:Card?
+    var containerDelegate:CardScrollView?
     
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.viewSetup()
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
@@ -42,38 +43,6 @@ class VerticalScrollView: UIScrollView, UIScrollViewDelegate {
         self.addSubview(card!)
     }
    
-    
-    //possible int problem here
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        var previousPage:Int = 0
-        var pageHeight = scrollView.frame.size.height
-        var fractionalPage = (scrollView.contentOffset.y/pageHeight)
-        var page:Int = Int(floor(fractionalPage))
-        if (previousPage != page) {
-            // Page has changed, do your thing!
-            // ...
-            // Finally, update previous page
-            println("PAGE TURNED")
-            previousPage = page
-        }
-    }
-    
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if (self.didCompleteUpAction()) {
-            println("SWIPED UP")
-        }
-        if(self.didCompleteDownAction()) {
-            println("SWIPED DOWN")
-        }
-    }
-    
-    
-    func didCompleteUpAction()->Bool{
-        return true
-    }
-    
-     func didCompleteDownAction()->Bool{
-        return false
-    }
+
     
 }
