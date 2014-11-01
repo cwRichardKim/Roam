@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        PFCloud.callFunction("bookItinerary", withParameters: ["itinID":"fCZn8Z0yxG","isBooked":false,"isPaid":false])
         // Do any additional setup after loading the view, typically from a nib.
     }
 
