@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "Roam": {
+            "applicationId": "HjrjUPAAWosdjW2e7r4xOv2LJ3Cmcp0398iTZXOf", 
+            "masterKey": "aThqWHRKhaHpWzVCkHQi56Vxvhhd1iJwm5SdrSBe"
+        }, 
+        "_default": {
+            "link": "Roam"
+        }
+    }
+}
