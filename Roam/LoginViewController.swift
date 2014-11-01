@@ -30,7 +30,31 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func facebookLoginButtonPressed(sender: AnyObject) {
-        
+        let permissionsArray:NSArray = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
+        PFFacebookUtils.logInWithPermissions(permissionsArray, block: { user, error in
+            if (user == nil) {
+                var errorMessage:String? = nil
+                if (error == nil) {
+                    errorMessage = "Uh oh. The user cancelled the Facebook login"
+                } else {
+                    errorMessage = error.localizedDescription
+                }
+                let alert: UIAlertController = UIAlertController(title: "Log In Error", message: errorMessage, preferredStyle: .Alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alert.addAction(defaultAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                if (user.isNew) {
+                    println("User with facebook signe dup and logged in!")
+                } else {
+                    println("User with facebook logged in!")
+                }
+                self.presentUserDetailsViewControllerAnimated(true)
+            }
+        })
+    }
+    
+    func presentUserDetailsViewControllerAnimated(animated:Bool) {
         
     }
 
