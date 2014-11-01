@@ -14,10 +14,7 @@ class ClipView: UIView {
     var scrollView:CardScrollView?
     
     override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-        if(self.pointInside(point, withEvent:event)) {
-            return scrollView
-        }
-        return nil
+        return self.pointInside(point, withEvent:event) ? scrollView : nil
     }
     
     override init(frame: CGRect) {

@@ -79,7 +79,7 @@ class CardScrollView: UIScrollView {
     
     func expandScrollView() {
         var size = self.contentSize
-        size.width = self.frame.size.width
+        size.width += self.frame.size.width
         self.contentSize = size
     }
     

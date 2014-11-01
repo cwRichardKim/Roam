@@ -11,6 +11,13 @@ import UIKit
 class Card: UIView {
     
     var panGestureRecognizer:UIPanGestureRecognizer?
+    var profileCircleView: UIView?
+    var profileImageView: UIImageView?
+    var itinImageView: UIImageView?
+    var nameLabel: UILabel?
+    var bookButton: UIButton?
+    var descriptionLabel: UILabel?
+    
     
     override init() {
        super.init()
