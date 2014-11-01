@@ -35,5 +35,32 @@ Parse.Cloud.define("bookItinerary", function(request, response){
 				response.error("ERROR: could not find itin");
 			}
 		});
-	};
+	}
 });
+
+/*
+	Returns all the relevant events for the user, locaiton and time
+	expected parameters:
+		rangeStart: date of earliest date the user is considering tour
+		rangeEnd: date of latest date the user is considering tour
+		location: location of the desired area.
+*/
+Parse.Cloud.define("getItineraries", function(request, response){
+	var user = Parse.User.current();
+	var query = new Parse.Query("Itinerary");
+
+	if (request.params.location && request.params.rangeStart && request.params.rangeEnd) {
+		query.near("location", request.params.location);
+		query.limit(10);
+		query.lessThan("endTime",request.params.rangeEnd);
+		query.greaterThan("startTime",request.params.rangeStart);
+		query.find({
+			success: function(results) {
+				response.success(results);
+			},
+			error: function() {
+				response.error("ERROR: could not find itin");
+			}
+		});
+	}
+})

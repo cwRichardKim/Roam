@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        PFCloud.callFunction("bookItinerary", withParameters: ["itinID":"fCZn8Z0yxG","isBooked":false,"isPaid":false])
+//        PFCloud.callFunction("getItineraries", withParameters: ["location":PFGeoPoint(latitude: 0, longitude: 0),"rangeStart":NSDate.init(),"rangeEnd":NSDate.init()])
         // Do any additional setup after loading the view, typically from a nib.
     }
 
