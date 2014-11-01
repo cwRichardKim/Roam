@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         self.setupClipView()
         self.view.addSubview(myScrollView!)
         super.viewDidLoad()
-        
     }
 
     override func didReceiveMemoryWarning() {

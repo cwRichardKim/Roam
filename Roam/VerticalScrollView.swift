@@ -40,7 +40,6 @@ class VerticalScrollView: UIScrollView, UIScrollViewDelegate {
         self.contentSize = CGSizeMake(self.frame.size.width, self.frame.size.height*3)
         card?.center = CGPointMake(self.contentSize.width/2,self.contentSize.height/2)
         self.addSubview(card!)
-        
     }
    
     
@@ -76,5 +75,5 @@ class VerticalScrollView: UIScrollView, UIScrollViewDelegate {
      func didCompleteDownAction()->Bool{
         return false
     }
-       
+    
 }
