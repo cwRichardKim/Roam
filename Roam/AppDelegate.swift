@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("HjrjUPAAWosdjW2e7r4xOv2LJ3Cmcp0398iTZXOf", clientKey: "EcnaDjMeEoCbXJKtpbYlWViSom2nIxTXQJIDWeDR")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()
+        if ((PFUser.currentUser()) != nil) {
+            let vc = ViewController()
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        }
         // Override point for customization after application launch.
         return true
     }

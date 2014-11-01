@@ -55,7 +55,8 @@ class LoginViewController: UIViewController {
     }
     
     func presentUserDetailsViewControllerAnimated(animated:Bool) {
-        
+        let vc = ViewController()
+        self.presentViewController(vc, animated: false, completion: nil)
     }
 
 
