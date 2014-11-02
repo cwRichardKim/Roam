@@ -53,6 +53,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
     var timesLabel:UILabel = UILabel()
     var priceLabel:UILabel = UILabel()
     var tagLabel:UILabel = UILabel()
+    var viewController:ViewController = ViewController()
     
 //    var bookButton:UIButton?
    var ven = PaymentController()
@@ -129,7 +130,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
     }
     
     func moreButtonTouchUpInside() {
-        
+        viewController.showDetails(self.fullDescription)
     }
     
     func setupBookButton() {

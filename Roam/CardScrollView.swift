@@ -25,6 +25,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
     var lastContentOffSetHorizontal:CGFloat?
     var lastHorizontalLeftSwipe = false
     var lastPoint:CGPoint?
+    var viewController:ViewController = ViewController()
     
     var startingPoint:CGPoint?
     
@@ -88,6 +89,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
             card.priceLabel.text = NSString(format: "$ %.2f", card.price)
             card.timesLabel.text = itin.objectForKey("dateString") as NSString
             card.tagLabel.text = itin.objectForKey("tags") as NSString
+            card.viewController = viewController
         }
     }
     

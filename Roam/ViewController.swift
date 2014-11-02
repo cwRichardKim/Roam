@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         self.fetchItineraries(test, rangeStart: NSDate(timeIntervalSince1970: 0), rangeEnd: NSDate(timeIntervalSinceNow: 1000))
     }
 
+    func showDetails (details:NSString) {
+        var alert = UIAlertController(title: "Details", message: details, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,6 +57,7 @@ class ViewController: UIViewController {
                 for itin in results as [AnyObject] {
                     self.itinArray?.addObject(itin)
                 }
+                self.myScrollView?.viewController = self
                 self.myScrollView?.addCardsForItins(self.itinArray!)
             }
         })
