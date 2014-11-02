@@ -22,7 +22,7 @@
 		<key>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</key>
 		<string>..</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>..Alamofire/</string>
+		<string>..Alamofire</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/cwRichardKim/Roam.git</string>
@@ -36,17 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<string>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
+			<string>Roam</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</string>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Roam</string>
+			<string>RoamAlamofire</string>
 		</dict>
 	</array>
 </dict>

@@ -43,13 +43,16 @@ class Card: UIView, UIGestureRecognizerDelegate {
     var schoolLabel: UILabel?
     var bookButton: UIButton?
     var descriptionLabel: UILabel = UILabel()
-    var dividerView1:UIView?
-    var dividerView2:UIView?
+    var dividerView1:UIView = UIView()
+    var dividerView2:UIView = UIView()
     var ratingsImageView:UIImageView = UIImageView()
     var numRatingsLabel:UILabel = UILabel()
     var phoneNumber:NSString = "-1"
     var fullDescription:NSString = ""
     var price:CGFloat =  0.0
+    var timesLabel:UILabel = UILabel()
+    var priceLabel:UILabel = UILabel()
+    var tagLabel:UILabel = UILabel()
     
 //    var bookButton:UIButton?
    var ven = PaymentController()
@@ -89,8 +92,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
         var dividerY:CGFloat = self.frame.size.height*DESCRIPTIONDIVIDER_SPACING_RATIO
         var dividerX1:CGFloat = self.frame.size.width/3
         var dividerX2:CGFloat = self.frame.size.width*(2/3)
-        var dividerView1 = UIView(frame: CGRect(x: dividerX1, y: dividerY, width: dividerWidth, height: dividerHeight))
-        var dividerView2 = UIView(frame: CGRect(x: dividerX2, y: dividerY, width: dividerWidth, height: dividerHeight))
+        dividerView1.frame = CGRect(x: dividerX1, y: dividerY, width: dividerWidth, height: dividerHeight)
+        dividerView2.frame = CGRect(x: dividerX2, y: dividerY, width: dividerWidth, height: dividerHeight)
         dividerView1.backgroundColor = UIColor.grayColor()
         dividerView2.backgroundColor = UIColor.grayColor()
         dividerView1.alpha = DIVIDER_ALPHA
@@ -106,6 +109,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
         
         self.setupMoreButton()
         self.setupBookButton()
+        self.setSummaryLabels()
         
         self.setupschoolLabel(CGRectMake((pp_circle.frame.origin.x + pp_circle.frame.size.width), (cp_mask.frame.size.height + 7.0), self.frame.size.width, 26))
         self.setupRatings(pp_circle.frame)
@@ -181,6 +185,32 @@ class Card: UIView, UIGestureRecognizerDelegate {
         descriptionString.appendAttributedString(boldedString2)
         descriptionLabel.attributedText = descriptionString
         descriptionLabel.textAlignment = NSTextAlignment.Center
+    }
+    
+    func setSummaryLabels() {
+        var center:CGPoint = dividerView1.center
+        center.x = self.frame.width / 2
+        
+        timesLabel.frame = CGRect(x: 0,y: 0,width: 110/2,height: 100/2)
+        timesLabel.center = CGPoint(x: dividerView1.center.x/2, y: center.y)
+        timesLabel.textAlignment = NSTextAlignment.Center
+        timesLabel.numberOfLines = 3
+        timesLabel.font = UIFont(name:"HelveticaNeue-Light",size:13)
+        timesLabel.textColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1)
+        priceLabel.frame = CGRect(x: 0,y: 0,width: 110/2,height: 90/2)
+        priceLabel.center = center
+        priceLabel.textAlignment = NSTextAlignment.Center
+        priceLabel.font = UIFont(name:"HelveticaNeue-Light",size:13)
+        priceLabel.textColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1)
+        tagLabel.frame = CGRect(x: 0,y: 0,width: 110/2,height: 90/2)
+        tagLabel.center = CGPoint(x: dividerView1.center.x / 2 * 5, y: center.y)
+        tagLabel.textAlignment = NSTextAlignment.Center
+        tagLabel.numberOfLines = 3
+        tagLabel.font = UIFont(name:"HelveticaNeue-Light",size:13)
+        tagLabel.textColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1)
+        self.addSubview(timesLabel)
+        self.addSubview(priceLabel)
+        self.addSubview(tagLabel)
     }
     
     // MARK: ratings
