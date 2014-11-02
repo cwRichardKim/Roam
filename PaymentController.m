@@ -25,7 +25,7 @@
 
 
 
--(void)pay:(NSString *)venmoId with:(CGFloat)amount {
+-(void)pay:(NSString *)venmoId with:(float)amount {
     if (![Venmo isVenmoAppInstalled]) {
         [[Venmo sharedInstance] setDefaultTransactionMethod:VENTransactionMethodAPI];
     }

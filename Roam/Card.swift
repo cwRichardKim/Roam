@@ -49,7 +49,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
     var numRatingsLabel:UILabel = UILabel()
     var phoneNumber:NSString = "-1"
     var fullDescription:NSString = ""
-    var price:CGFloat =  0.0
+    var price:Float =  0.0
     var timesLabel:UILabel = UILabel()
     var priceLabel:UILabel = UILabel()
     var tagLabel:UILabel = UILabel()

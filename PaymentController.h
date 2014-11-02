@@ -12,7 +12,7 @@
 @interface PaymentController : NSObject
 
 -(void)initializeVenmo;
--(void)pay:(NSString *)venmoId with:(CGFloat)amount;
+-(void)pay:(NSString *)venmoId with:(float)amount;
 -(BOOL)handleURL:(NSURL *)url;
 
 @end
