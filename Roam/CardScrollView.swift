@@ -9,6 +9,7 @@
 //import Cocoa
 import UIKit
 import AlamoFire
+import Parse
 
 class CardScrollView: UIScrollView, UIScrollViewDelegate {
     
@@ -70,9 +71,19 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
         startingPoint = self.frame.origin
     }
     
-    func addCards(cards: [Card]) {
-        for card in cards {
-            self.addCard(card as Card)
+    func addCardsForItins(itins:NSMutableArray) {
+        for itin in itins {
+            var card:Card = Card()
+            self.addCard(card)
+            card.nameLabel.text = itin.objectForKey("hostName") as NSString
+            card.setDescriptionText((itin.objectForKey("descriptionHeaders") as NSArray)[0] as NSString, string2: (itin.objectForKey("descriptionHeaders") as NSArray)[1] as NSString)
+            card.phoneNumber = itin.objectForKey("phoneNumber")as NSString
+            card.fullDescription = itin.objectForKey("description")as NSString
+            card.profileImageView.file = itin.objectForKey("profilePicture") as PFFile
+            card.profileImageView.loadInBackground(nil)
+            card.itinImageView.file = itin.objectForKey("coverPhoto") as PFFile
+            card.itinImageView.loadInBackground(nil)
+            card.setRatingStars((itin.objectForKey("rating")as NSNumber).floatValue, numReviewers: (itin.objectForKey("numRatings") as NSNumber).integerValue)
         }
     }
     

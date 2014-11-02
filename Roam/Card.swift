@@ -37,16 +37,18 @@ class Card: UIView, UIGestureRecognizerDelegate {
     let TEXT_HEIGHT_RATIO:CGFloat = 0.8
     
     var panGestureRecognizer:UIPanGestureRecognizer?
-    var profileImageView: UIImageView?
-    var itinImageView: UIImageView?
-    var nameLabel: UILabel?
+    var profileImageView:PFImageView = PFImageView()
+    var itinImageView: PFImageView = PFImageView()
+    var nameLabel: UILabel = UILabel()
     var schoolLabel: UILabel?
     var bookButton: UIButton?
-    var descriptionLabel: UILabel?
+    var descriptionLabel: UILabel = UILabel()
     var dividerView1:UIView?
     var dividerView2:UIView?
-    var ratingsImageView:UIImageView?
-    var numRatingsLabel:UILabel?
+    var ratingsImageView:UIImageView = UIImageView()
+    var numRatingsLabel:UILabel = UILabel()
+    var phoneNumber:NSString = "-1"
+    var fullDescription:NSString = ""
     
 //    var bookButton:UIButton?
     
@@ -67,46 +69,19 @@ class Card: UIView, UIGestureRecognizerDelegate {
         pp_circle.backgroundColor = UIColor.whiteColor()
         pp_circle.layer.cornerRadius = pp_circle.frame.size.height/2
         pp_mask.layer.cornerRadius = pp_mask.frame.size.height/2
-        profileImageView = UIImageView(frame: CGRectMake(0, 0, pp_mask.frame.size.width, pp_mask.frame.size.height))
-        itinImageView = UIImageView(frame: cp_mask.frame)
-        itinImageView?.contentMode = UIViewContentMode.ScaleAspectFill
-        cp_mask.addSubview(itinImageView!)
-        pp_mask.addSubview(profileImageView!)
+        profileImageView.frame = CGRectMake(0, 0, pp_mask.frame.size.width, pp_mask.frame.size.height)
+        itinImageView.frame = cp_mask.frame
+        itinImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        cp_mask.addSubview(itinImageView)
+        pp_mask.addSubview(profileImageView)
         cp_mask.clipsToBounds = true
         pp_mask.clipsToBounds = true
         
-        itinImageView?.backgroundColor = UIColor.lightGrayColor()
+        itinImageView.backgroundColor = UIColor.lightGrayColor()
         
-        nameLabel = UILabel(frame: CGRectMake((pp_circle.frame.origin.x + pp_circle.frame.size.width), (cp_mask.frame.size.height + 7.0), self.frame.size.width, 26))
-        nameLabel?.font = UIFont(name: "HelveticaNeue", size: CGFloat(20))
-        nameLabel?.textColor = UIColor(red: 0.33, green: 0.49, blue: 0.6, alpha: 1)
-        var descriptionHeight:CGFloat = self.frame.size.height * DESCRIPTION_HEIGHT_RATIO / 2;
-        var descriptionWidth:CGFloat = self.frame.size.width * DESCRIPTION_WIDTH_RATIO;
-
-        nameLabel?.text = "Richard Kim"
-       
-        
-        var descriptionX:CGFloat = (self.frame.size.width - descriptionWidth) / 2
-        var descriptionY:CGFloat = self.frame.size.height * DESCRIPTION_Y_RATIO
-        descriptionLabel = UILabel(frame: CGRect(x:descriptionX, y: descriptionY, width: descriptionWidth, height: descriptionHeight))
-        descriptionLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 15)
-        descriptionLabel?.textColor = UIColor(red: 0.61, green: 0.61, blue: 0.61, alpha: 1)
-        nameLabel?.textColor = UIColor(red: 0.33, green: 0.49, blue: 0.6, alpha: 1)
-        descriptionLabel?.numberOfLines = 3
-//        var str = "ASDFASDFASDFASDFASDFASDFASDFASDFASD" //string goes here
-//        var previewStr = ""
-//        if(countElements(str) > 127) {
-//            var endIndex = advance(str.startIndex, countElements(str) - 13)
-//            previewStr = str.substringWithRange(Range<String.Index>(start:str.startIndex, end:endIndex))
-//        } else {
-//            previewStr = str
-//        }
-//        previewStr += "... "
-//        var previewAttr = NSMutableAttributedString(string: previewStr)
-//        var moreAttr = NSMutableAttributedString(string: "More Info")
-//        moreAttr.addAttribute(NSForegroundColorAttributeName, value:UIColor.blueColor(), range: NSRange(location: 0, length: moreAttr.length))
-//       previewAttr.appendAttributedString(moreAttr)
-        self.setDescriptionText("beautiful places", string2: "delicious street food")
+        nameLabel.frame = CGRectMake((pp_circle.frame.origin.x + pp_circle.frame.size.width), (cp_mask.frame.size.height + 7.0), self.frame.size.width, 26)
+        nameLabel.font = UIFont(name: "HelveticaNeue", size: CGFloat(20))
+        nameLabel.textColor = UIColor(red: 0.33, green: 0.49, blue: 0.6, alpha: 1)
         
         var dividerHeight = DIVIDER_RATIO
         var dividerWidth = CGFloat(1.0)
@@ -122,8 +97,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
         
         self.addSubview(dividerView1)
         self.addSubview(dividerView2)
-        self.addSubview(descriptionLabel!)
-        self.addSubview(nameLabel!)
+        self.addSubview(descriptionLabel)
+        self.addSubview(nameLabel)
         self.addSubview(cp_mask)
         self.addSubview(pp_circle)
         self.addSubview(pp_mask)
@@ -178,6 +153,17 @@ class Card: UIView, UIGestureRecognizerDelegate {
     }
     
     func setDescriptionText(string1:NSString, string2:NSString) {
+        var descriptionHeight:CGFloat = self.frame.size.height * DESCRIPTION_HEIGHT_RATIO / 2;
+        var descriptionWidth:CGFloat = self.frame.size.width * DESCRIPTION_WIDTH_RATIO;
+
+        var descriptionX:CGFloat = (self.frame.size.width - descriptionWidth) / 2
+        var descriptionY:CGFloat = self.frame.size.height * DESCRIPTION_Y_RATIO
+        descriptionLabel.frame = CGRect(x:descriptionX, y: descriptionY, width: descriptionWidth, height: descriptionHeight)
+        descriptionLabel.font = UIFont(name: "HelveticaNeue-Light", size: 15)
+        descriptionLabel.textColor = UIColor(red: 0.61, green: 0.61, blue: 0.61, alpha: 1)
+        nameLabel.textColor = UIColor(red: 0.33, green: 0.49, blue: 0.6, alpha: 1)
+        descriptionLabel.numberOfLines = 3
+        
         let str1 = "Let me show you "
         let str2 = NSAttributedString(string: " and ")
         let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 15)
@@ -191,8 +177,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
         descriptionString.appendAttributedString(boldedString1)
         descriptionString.appendAttributedString(str2)
         descriptionString.appendAttributedString(boldedString2)
-        descriptionLabel?.attributedText = descriptionString
-        descriptionLabel?.textAlignment = NSTextAlignment.Center
+        descriptionLabel.attributedText = descriptionString
+        descriptionLabel.textAlignment = NSTextAlignment.Center
     }
     
     // MARK: ratings
@@ -201,21 +187,17 @@ class Card: UIView, UIGestureRecognizerDelegate {
         let buffer:CGFloat = (1.0 - RATINGS_WIDTH_RATIO) / 2.0 * circleFrame.width
         let height:CGFloat = RATINGS_HEIGHT_RATIO * circleFrame.height
         var frame:CGRect = CGRectMake(buffer + circleFrame.origin.x, circleFrame.height + circleFrame.origin.y, circleFrame.width * RATINGS_WIDTH_RATIO, height)
-        ratingsImageView = UIImageView(frame: frame)
-        ratingsImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        ratingsImageView?.image = UIImage(named: "4.5 stars")
-        self.addSubview(ratingsImageView!)
+        ratingsImageView.frame = frame
+        ratingsImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.addSubview(ratingsImageView)
         
         frame.origin.y += 20
-        numRatingsLabel = UILabel(frame: frame)
-        numRatingsLabel?.text = "47 ratings"
-        numRatingsLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
-        numRatingsLabel?.textAlignment = NSTextAlignment.Center
-        numRatingsLabel?.textColor = UIColor(red: 0.64, green: 0.64, blue: 0.64, alpha: 0.7)
+        numRatingsLabel.frame = frame
+        numRatingsLabel.font = UIFont(name: "HelveticaNeue", size: 15)
+        numRatingsLabel.textAlignment = NSTextAlignment.Center
+        numRatingsLabel.textColor = UIColor(red: 0.64, green: 0.64, blue: 0.64, alpha: 0.7)
         
-        self.setRatingStars(3.7, numReviewers: 30)
-        
-        self.addSubview(numRatingsLabel!)
+        self.addSubview(numRatingsLabel)
     }
     
     func setRatingStars(rating:Float, numReviewers:Int) {
@@ -226,9 +208,9 @@ class Card: UIView, UIGestureRecognizerDelegate {
         var str = String(format: "%.1f", temp)
         var string = NSString(string: str)
         string = string.stringByAppendingString(" stars")
-        ratingsImageView?.image = UIImage(named: string)
-        numRatingsLabel?.text = NSString()
-        numRatingsLabel?.text = NSString(format: "%i Reviews", numReviewers)
+        ratingsImageView.image = UIImage(named: string)
+        numRatingsLabel.text = NSString()
+        numRatingsLabel.text = NSString(format: "%i Reviews", numReviewers)
     }
     
     override init(frame: CGRect) {
@@ -246,8 +228,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
     
     override func layoutSubviews() {
         self.backgroundColor = UIColor.whiteColor()
-        self.setupCardVisuals()
         self.layer.cornerRadius = 8
+        self.setupCardVisuals()
     }
 
     

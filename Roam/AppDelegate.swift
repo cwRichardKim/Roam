@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
         }
+//        PFUser.logOut()
         // Override point for customization after application launch.
         return true
     }

@@ -21,11 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
         myScrollView = CardScrollView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
-        var card1:Card = Card()
-        var card2:Card = Card()
-        var card3:Card = Card()
-        var card4:Card = Card()
-        myScrollView?.addCards([card1, card2, card3, card4])
         self.setupClipView()
         self.view.addSubview(myScrollView!)
         super.viewDidLoad()
@@ -34,6 +29,7 @@ class ViewController: UIViewController {
         self.fetchItineraries(test, rangeStart: NSDate(timeIntervalSince1970: 0), rangeEnd: NSDate(timeIntervalSinceNow: 1000))
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,7 +50,9 @@ class ViewController: UIViewController {
                 println("Error getting Itineraries")
             } else {
                 for itin in results as [AnyObject] {
+                    self.itinArray?.addObject(itin)
                 }
+                self.myScrollView?.addCardsForItins(self.itinArray!)
             }
         })
     }
