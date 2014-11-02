@@ -78,6 +78,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
             card.nameLabel.text = itin.objectForKey("hostName") as NSString
             card.setDescriptionText((itin.objectForKey("descriptionHeaders") as NSArray)[0] as NSString, string2: (itin.objectForKey("descriptionHeaders") as NSArray)[1] as NSString)
             card.phoneNumber = itin.objectForKey("phoneNumber")as NSString
+            card.price = CGFloat((itin.objectForKey("price") as NSNumber).floatValue)
             card.fullDescription = itin.objectForKey("description")as NSString
             card.profileImageView.file = itin.objectForKey("profilePicture") as PFFile
             card.profileImageView.loadInBackground(nil)
