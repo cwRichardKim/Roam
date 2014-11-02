@@ -49,9 +49,10 @@ class Card: UIView, UIGestureRecognizerDelegate {
     var numRatingsLabel:UILabel = UILabel()
     var phoneNumber:NSString = "-1"
     var fullDescription:NSString = ""
+    var price:CGFloat =  0.0
     
 //    var bookButton:UIButton?
-    
+   var ven = PaymentController()
     
     override init() {
        super.init()
@@ -140,7 +141,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
     }
     
     func bookButtonTouchUpInside() {
-        
+        //REPLACE WITH INPUT HERE
+        ven.pay(self.phoneNumber, with:self.price)
     }
     
     // MARK: text

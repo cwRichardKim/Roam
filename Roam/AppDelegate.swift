@@ -12,12 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var ven:PaymentController = PaymentController()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Parse.setApplicationId("HjrjUPAAWosdjW2e7r4xOv2LJ3Cmcp0398iTZXOf", clientKey: "EcnaDjMeEoCbXJKtpbYlWViSom2nIxTXQJIDWeDR")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()
+        ven.initializeVenmo()
         if ((PFUser.currentUser()) != nil) {
             let vc = ViewController()
             self.window?.rootViewController = vc
@@ -44,7 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: Facebook
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
+        if(ven.handleURL(url)) {
+            return true
+        } else {
+            return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
+        }
     }
     
     func applicationDidBecomeActive(application: UIApplication) {

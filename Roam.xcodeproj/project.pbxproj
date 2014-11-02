@@ -18,7 +18,6 @@
 		99A3494E1A04A148006E15AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349371A04A102006E15AF /* CoreGraphics.framework */; };
 		99A3494F1A04A148006E15AF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349351A04A0DA006E15AF /* CFNetwork.framework */; };
 		99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349331A04A0D4006E15AF /* AudioToolbox.framework */; };
-		99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A349511A04A5E6006E15AF /* Bolts.framework */; };
 		99EE4B591A04983500F9B7CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B581A04983500F9B7CF /* AppDelegate.swift */; };
 		99EE4B5B1A04983500F9B7CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE4B5A1A04983500F9B7CF /* ViewController.swift */; };
 		99EE4B5E1A04983500F9B7CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EE4B5C1A04983500F9B7CF /* Main.storyboard */; };
@@ -33,6 +32,8 @@
 		E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66F1A0505FB00A52458 /* LoginViewController.swift */; };
 		E05EB6F71A05620800A52458 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EB6F61A05620800A52458 /* FacebookSDK.framework */; };
 		E05EB7041A059ED800A52458 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E05EB6FE1A059DB800A52458 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E05EB73D1A061F0B00A52458 /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05EB73C1A061F0B00A52458 /* PaymentController.m */; };
+		F41146294A8D431681FE510F /* libPods-Roam.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2437AB6C83D47D3AC6F170B /* libPods-Roam.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06812585155748DA8ECDB174 /* Pods-Roam.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roam.xcconfig"; path = "Pods/Pods-Roam.xcconfig"; sourceTree = "<group>"; };
 		993451ED1A05342C00178444 /* Roam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Roam-Bridging-Header.h"; sourceTree = "<group>"; };
 		993451F01A05353000178444 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		99A349331A04A0D4006E15AF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -93,7 +95,6 @@
 		99A349411A04A126006E15AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		99A349431A04A12D006E15AF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		99A349451A04A134006E15AF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		99A349511A04A5E6006E15AF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		99EE4B531A04983500F9B7CF /* Roam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EE4B571A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B581A04983500F9B7CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		99EE4B6D1A04983500F9B7CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EE4B6E1A04983500F9B7CF /* RoamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoamTests.swift; sourceTree = "<group>"; };
 		99EE4C021A04A05300F9B7CF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C2437AB6C83D47D3AC6F170B /* libPods-Roam.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Roam.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05EB6671A04B37800A52458 /* VerticalScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
 		E05EB6691A04B3B000A52458 /* ClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipView.swift; sourceTree = "<group>"; };
 		E05EB66B1A04B3D700A52458 /* CardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,8 @@
 		E05EB66F1A0505FB00A52458 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E05EB6F61A05620800A52458 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		E05EB73B1A061F0B00A52458 /* PaymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentController.h; path = ../PaymentController.h; sourceTree = "<group>"; };
+		E05EB73C1A061F0B00A52458 /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentController.m; path = ../PaymentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,6 @@
 				99A349471A04A148006E15AF /* SystemConfiguration.framework in Frameworks */,
 				99A349481A04A148006E15AF /* StoreKit.framework in Frameworks */,
 				99A349491A04A148006E15AF /* Security.framework in Frameworks */,
-				99A349521A04A5E6006E15AF /* Bolts.framework in Frameworks */,
 				99A3494A1A04A148006E15AF /* QuartzCore.framework in Frameworks */,
 				99A3494B1A04A148006E15AF /* MobileCoreServices.framework in Frameworks */,
 				99A3494C1A04A148006E15AF /* libz.dylib in Frameworks */,
@@ -133,6 +136,7 @@
 				99A349501A04A148006E15AF /* AudioToolbox.framework in Frameworks */,
 				99EE4C031A04A05300F9B7CF /* Parse.framework in Frameworks */,
 				E05EB6F71A05620800A52458 /* FacebookSDK.framework in Frameworks */,
+				F41146294A8D431681FE510F /* libPods-Roam.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +158,8 @@
 				99EE4B6B1A04983500F9B7CF /* RoamTests */,
 				99EE4B541A04983500F9B7CF /* Products */,
 				993451ED1A05342C00178444 /* Roam-Bridging-Header.h */,
+				06812585155748DA8ECDB174 /* Pods-Roam.xcconfig */,
+				DA8FBFE2C5E44A35835386E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +182,8 @@
 				E05EB6671A04B37800A52458 /* VerticalScrollView.swift */,
 				E05EB6691A04B3B000A52458 /* ClipView.swift */,
 				E05EB66D1A04B3E800A52458 /* Card.swift */,
+				E05EB73B1A061F0B00A52458 /* PaymentController.h */,
+				E05EB73C1A061F0B00A52458 /* PaymentController.m */,
 				99EE4B5C1A04983500F9B7CF /* Main.storyboard */,
 				99EE4B5F1A04983500F9B7CF /* Images.xcassets */,
 				99EE4B611A04983500F9B7CF /* LaunchScreen.xib */,
@@ -215,7 +223,6 @@
 			children = (
 				E05EB6F61A05620800A52458 /* FacebookSDK.framework */,
 				993451F01A05353000178444 /* ParseFacebookUtils.framework */,
-				99A349511A04A5E6006E15AF /* Bolts.framework */,
 				99A349451A04A134006E15AF /* SystemConfiguration.framework */,
 				99A349431A04A12D006E15AF /* StoreKit.framework */,
 				99A349411A04A126006E15AF /* Security.framework */,
@@ -227,6 +234,14 @@
 				99A349351A04A0DA006E15AF /* CFNetwork.framework */,
 				99A349331A04A0D4006E15AF /* AudioToolbox.framework */,
 				99EE4C021A04A05300F9B7CF /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA8FBFE2C5E44A35835386E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2437AB6C83D47D3AC6F170B /* libPods-Roam.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,10 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99EE4B721A04983500F9B7CF /* Build configuration list for PBXNativeTarget "Roam" */;
 			buildPhases = (
+				6ADF55C455E44D17BF1F1C06 /* Check Pods Manifest.lock */,
 				99EE4B4F1A04983500F9B7CF /* Sources */,
 				99EE4B501A04983500F9B7CF /* Frameworks */,
 				99EE4B511A04983500F9B7CF /* Resources */,
 				E05EB7031A059EB900A52458 /* Copy Frameworks */,
+				02AE06A9072C467FBAE6B244 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,11 +378,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02AE06A9072C467FBAE6B244 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Roam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ADF55C455E44D17BF1F1C06 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99EE4B4F1A04983500F9B7CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05EB73D1A061F0B00A52458 /* PaymentController.m in Sources */,
 				E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */,
 				E05EB66C1A04B3D700A52458 /* CardScrollView.swift in Sources */,
 				E05EB66E1A04B3E800A52458 /* Card.swift in Sources */,
@@ -498,6 +549,7 @@
 		};
 		99EE4B731A04983500F9B7CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06812585155748DA8ECDB174 /* Pods-Roam.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -521,6 +573,7 @@
 		};
 		99EE4B741A04983500F9B7CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06812585155748DA8ECDB174 /* Pods-Roam.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
