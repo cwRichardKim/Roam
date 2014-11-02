@@ -85,9 +85,9 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
             card.itinImageView.file = itin.objectForKey("coverPhoto") as PFFile
             card.itinImageView.loadInBackground(nil)
             card.setRatingStars((itin.objectForKey("rating")as NSNumber).floatValue, numReviewers: (itin.objectForKey("numRatings") as NSNumber).integerValue)
-            card.priceLabel.text = "$"
-            card.timesLabel.text = "DICKS DICKS TIME"
-            card.tagLabel.text = "TAG TAG TAG"
+            card.priceLabel.text = NSString(format: "$ %.2f", card.price)
+            card.timesLabel.text = itin.objectForKey("dateString") as NSString
+            card.tagLabel.text = itin.objectForKey("tags") as NSString
         }
     }
     

@@ -202,7 +202,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
         priceLabel.textAlignment = NSTextAlignment.Center
         priceLabel.font = UIFont(name:"HelveticaNeue-Light",size:13)
         priceLabel.textColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1)
-        tagLabel.frame = CGRect(x: 0,y: 0,width: 110/2,height: 90/2)
+        tagLabel.frame = CGRect(x: 0,y: 0,width: 140/2,height: 90/2)
         tagLabel.center = CGPoint(x: dividerView1.center.x / 2 * 5, y: center.y)
         tagLabel.textAlignment = NSTextAlignment.Center
         tagLabel.numberOfLines = 3
