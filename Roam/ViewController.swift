@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var myScrollView : CardScrollView?
     var itinArray: NSMutableArray?
-    var itinCount: NSInteger?
+    var itinCount: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -135,23 +135,6 @@ class Card: UIView, UIGestureRecognizerDelegate {
         self.setupRatings(pp_circle.frame)
     }
     
-    func setDescriptionText(string1:NSString, string2:NSString) {
-        let str1 = "Let me show you "
-        let str2 = NSAttributedString(string: " and ")
-        let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 15)
-        
-        let boldedString1 = NSMutableAttributedString(string: string1)
-        boldedString1.addAttribute(NSFontAttributeName, value: boldFont!, range: NSMakeRange(0, boldedString1.length))
-        let boldedString2 = NSMutableAttributedString(string: string2)
-        boldedString2.addAttribute(NSFontAttributeName, value: boldFont!, range: NSMakeRange(0, boldedString2.length))
-
-        var descriptionString = NSMutableAttributedString(string: str1)
-        descriptionString.appendAttributedString(boldedString1)
-        descriptionString.appendAttributedString(str2)
-        descriptionString.appendAttributedString(boldedString2)
-        descriptionLabel?.attributedText = descriptionString
-        descriptionLabel?.textAlignment = NSTextAlignment.Center
-    }
     
     // MARK: buttons
     
@@ -194,6 +177,26 @@ class Card: UIView, UIGestureRecognizerDelegate {
         self.addSubview(schoolLabel!)
     }
     
+    func setDescriptionText(string1:NSString, string2:NSString) {
+        let str1 = "Let me show you "
+        let str2 = NSAttributedString(string: " and ")
+        let boldFont = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        
+        let boldedString1 = NSMutableAttributedString(string: string1)
+        boldedString1.addAttribute(NSFontAttributeName, value: boldFont!, range: NSMakeRange(0, boldedString1.length))
+        let boldedString2 = NSMutableAttributedString(string: string2)
+        boldedString2.addAttribute(NSFontAttributeName, value: boldFont!, range: NSMakeRange(0, boldedString2.length))
+
+        var descriptionString = NSMutableAttributedString(string: str1)
+        descriptionString.appendAttributedString(boldedString1)
+        descriptionString.appendAttributedString(str2)
+        descriptionString.appendAttributedString(boldedString2)
+        descriptionLabel?.attributedText = descriptionString
+        descriptionLabel?.textAlignment = NSTextAlignment.Center
+    }
+    
+    // MARK: ratings
+    
     func setupRatings(circleFrame:CGRect) {
         let buffer:CGFloat = (1.0 - RATINGS_WIDTH_RATIO) / 2.0 * circleFrame.width
         let height:CGFloat = RATINGS_HEIGHT_RATIO * circleFrame.height
@@ -210,8 +213,22 @@ class Card: UIView, UIGestureRecognizerDelegate {
         numRatingsLabel?.textAlignment = NSTextAlignment.Center
         numRatingsLabel?.textColor = UIColor(red: 0.64, green: 0.64, blue: 0.64, alpha: 0.7)
         
+        self.setRatingStars(3.7, numReviewers: 30)
         
         self.addSubview(numRatingsLabel!)
+    }
+    
+    func setRatingStars(rating:Float, numReviewers:Int) {
+        var stars = lroundf(rating * 2.0)
+        if (stars < 0) {stars = 0}
+        if (stars > 10) {stars = 10}
+        var temp:Float = Float(stars) / 2.0
+        var str = String(format: "%.1f", temp)
+        var string = NSString(string: str)
+        string = string.stringByAppendingString(" stars")
+        ratingsImageView?.image = UIImage(named: string)
+        numRatingsLabel?.text = NSString()
+        numRatingsLabel?.text = NSString(format: "%i Reviews", numReviewers)
     }
     
     override init(frame: CGRect) {
