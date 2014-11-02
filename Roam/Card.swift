@@ -18,26 +18,35 @@ class Card: UIView, UIGestureRecognizerDelegate {
     let DIVIDER_RATIO:CGFloat = 27.0
     let DIVIDER_ALPHA:CGFloat = 0.3
     
+    let SCHOOL_LABEL_BUFFER:CGFloat = 3.0
+    let SCHOOL_LABEL_HEIGHT:CGFloat = 16.0
+    
     let BOOK_BUTTON_WIDTH_RATIO:CGFloat = 0.9
     let BOOK_BUTTON_HEIGHT:CGFloat = 45.0
+    
+    let RATINGS_WIDTH_RATIO:CGFloat = 0.9 //from the pp circle
+    let RATINGS_HEIGHT_RATIO:CGFloat = 0.13 //from the pp circle
     
     let CP_RATIO:CGFloat = 0.38
     let PP_RATIO:CGFloat = 0.247
     let PP_X_RATIO:CGFloat = 0.0552
-    let PP_Y_RATIO:CGFloat = 0.246
+    let PP_Y_RATIO:CGFloat = 0.21
     let PP_BUFF:CGFloat = 3
 
-    let TEXT_WIDTH_RATIO = 0.9
-    let TEXT_HEIGHT_RATIO = 0.8
+    let TEXT_WIDTH_RATIO:CGFloat = 0.9
+    let TEXT_HEIGHT_RATIO:CGFloat = 0.8
     
     var panGestureRecognizer:UIPanGestureRecognizer?
     var profileImageView: UIImageView?
     var itinImageView: UIImageView?
     var nameLabel: UILabel?
+    var schoolLabel: UILabel?
     var bookButton: UIButton?
     var descriptionLabel: UILabel?
     var dividerView1:UIView?
     var dividerView2:UIView?
+    var ratingsImageView:UIImageView?
+    var numRatingsLabel:UILabel?
     
 //    var bookButton:UIButton?
     
@@ -74,7 +83,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
         var descriptionHeight:CGFloat = self.frame.size.height * DESCRIPTION_HEIGHT_RATIO / 2;
         var descriptionWidth:CGFloat = self.frame.size.width * DESCRIPTION_WIDTH_RATIO;
 
-        nameLabel?.text = "TESTING"
+        nameLabel?.text = "Richard Kim"
        
         
         var descriptionX:CGFloat = (self.frame.size.width - descriptionWidth) / 2
@@ -99,9 +108,6 @@ class Card: UIView, UIGestureRecognizerDelegate {
 //       previewAttr.appendAttributedString(moreAttr)
         self.setDescriptionText("beautiful places", string2: "delicious street food")
         
-        let touchGesture = UITapGestureRecognizer()
-        touchGesture.addTarget(descriptionLabel!, action: "testHit")
-        
         var dividerHeight = DIVIDER_RATIO
         var dividerWidth = CGFloat(1.0)
         var dividerY:CGFloat = self.frame.size.height*DESCRIPTIONDIVIDER_SPACING_RATIO
@@ -124,6 +130,9 @@ class Card: UIView, UIGestureRecognizerDelegate {
         
         self.setupMoreButton()
         self.setupBookButton()
+        
+        self.setupschoolLabel(CGRectMake((pp_circle.frame.origin.x + pp_circle.frame.size.width), (cp_mask.frame.size.height + 7.0), self.frame.size.width, 26))
+        self.setupRatings(pp_circle.frame)
     }
     
     func setDescriptionText(string1:NSString, string2:NSString) {
@@ -143,6 +152,8 @@ class Card: UIView, UIGestureRecognizerDelegate {
         descriptionLabel?.attributedText = descriptionString
         descriptionLabel?.textAlignment = NSTextAlignment.Center
     }
+    
+    // MARK: buttons
     
     func setupMoreButton() {
         let yval:CGFloat = self.frame.height * MORE_BUTTON_Y_RATIO
@@ -174,13 +185,39 @@ class Card: UIView, UIGestureRecognizerDelegate {
         
     }
     
+    // MARK: text
+    
+    func setupschoolLabel(nameFrame:CGRect) {
+        schoolLabel = UILabel(frame: CGRectMake(nameFrame.origin.x, nameFrame.origin.y + nameFrame.height + SCHOOL_LABEL_BUFFER, nameFrame.width, SCHOOL_LABEL_HEIGHT))
+        schoolLabel?.text = "Tufts University '17"
+        schoolLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
+        self.addSubview(schoolLabel!)
+    }
+    
+    func setupRatings(circleFrame:CGRect) {
+        let buffer:CGFloat = (1.0 - RATINGS_WIDTH_RATIO) / 2.0 * circleFrame.width
+        let height:CGFloat = RATINGS_HEIGHT_RATIO * circleFrame.height
+        var frame:CGRect = CGRectMake(buffer + circleFrame.origin.x, circleFrame.height + circleFrame.origin.y, circleFrame.width * RATINGS_WIDTH_RATIO, height)
+        ratingsImageView = UIImageView(frame: frame)
+        ratingsImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        ratingsImageView?.image = UIImage(named: "4.5 stars")
+        self.addSubview(ratingsImageView!)
+        
+        frame.origin.y += 20
+        numRatingsLabel = UILabel(frame: frame)
+        numRatingsLabel?.text = "47 ratings"
+        numRatingsLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+        numRatingsLabel?.textAlignment = NSTextAlignment.Center
+        numRatingsLabel?.textColor = UIColor(red: 0.64, green: 0.64, blue: 0.64, alpha: 0.7)
+        
+        
+        self.addSubview(numRatingsLabel!)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
-    func testHit() {
-        println("HIT TEST")
-    }
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
