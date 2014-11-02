@@ -95,8 +95,11 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
     func removeVerticalViewAndCard(verticalScroll: VerticalScrollView) {
         let card = verticalScroll.card
         var index:Int = self.indexOfFirstCardToShift(verticalScroll)
-        cardsArray.removeAtIndex(index)
-        verticalScroll.removeFromSuperview()
+        self.cardsArray.removeAtIndex(index)
+        delay(0.5) {
+            verticalScroll.removeFromSuperview()
+            return;
+        }
         self.contractScrollView()
         self.fillEmptyCardSpaceWithIndex(index)
 //        if let index = find(self.notes, note) {
@@ -104,6 +107,15 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
 //        }
 //        let index = find(cardsArray, card)
 //        cardsArray.removeAtIndex(index!)
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     
     func indexOfFirstCardToShift(vs:VerticalScrollView) -> Int {
@@ -133,7 +145,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
     
     func fillEmptyCardSpaceWithIndex(index:Int) {
         for var i = index; i < countElements(cardsArray); ++i {
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animateWithDuration(0.4, animations: {
                 var frame:CGRect = self.cardsArray[i].frame
                 frame.origin.x -= self.cardsArray[i].frame.size.width
                 self.cardsArray[i].frame = frame
@@ -155,8 +167,6 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
             var scrollDirectionVerticalDown = lastContentOffsetY > self.contentOffset.y
         }
     }
-    
-    
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if(scrollView != self) {
