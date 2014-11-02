@@ -14,7 +14,9 @@ import Parse
 class ViewController: UIViewController {
     
     var myScrollView : CardScrollView?
-
+    var itinArray: NSMutableArray?
+    var itinCount: NSInteger?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
@@ -25,6 +27,9 @@ class ViewController: UIViewController {
         self.setupClipView()
         self.view.addSubview(myScrollView!)
         super.viewDidLoad()
+        
+        var test:PFGeoPoint = PFGeoPoint(location: CLLocation(latitude: 0, longitude: 0)!)
+        self.fetchItineraries(test, rangeStart: NSDate(timeIntervalSince1970: 0), rangeEnd: NSDate(timeIntervalSinceNow: 1000))
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +43,19 @@ class ViewController: UIViewController {
         self.view.addSubview(clipView)
     }
 
+    func fetchItineraries(location:PFGeoPoint, rangeStart:NSDate, rangeEnd:NSDate) {
+        itinArray = NSMutableArray()
+        itinCount = 0
+        
+        PFCloud.callFunctionInBackground("getItineraries", withParameters: ["location" : location, "rangeStart":rangeStart,"rangeEnd":rangeEnd], block: { (results:AnyObject!, error:NSError!) -> Void in
+            if (error != nil) {
+                println("Error getting Itineraries")
+            } else {
+                for itin in results as [AnyObject] {
+                }
+            }
+        })
+    }
 
 }
 

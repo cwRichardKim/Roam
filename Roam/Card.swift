@@ -29,7 +29,7 @@ class Card: UIView, UIGestureRecognizerDelegate {
     
     let CP_RATIO:CGFloat = 0.38
     let PP_RATIO:CGFloat = 0.247
-    let PP_X_RATIO:CGFloat = 0.0552
+    let PP_X_RATIO:CGFloat = 0.025
     let PP_Y_RATIO:CGFloat = 0.21
     let PP_BUFF:CGFloat = 3
 
