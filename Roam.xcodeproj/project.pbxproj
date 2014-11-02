@@ -32,6 +32,7 @@
 		E05EB66E1A04B3E800A52458 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66D1A04B3E800A52458 /* Card.swift */; };
 		E05EB6701A0505FB00A52458 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EB66F1A0505FB00A52458 /* LoginViewController.swift */; };
 		E05EB6F71A05620800A52458 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05EB6F61A05620800A52458 /* FacebookSDK.framework */; };
+		E05EB7041A059ED800A52458 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E05EB6FE1A059DB800A52458 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,42 @@
 			remoteGlobalIDString = 99EE4B521A04983500F9B7CF;
 			remoteInfo = Roam;
 		};
+		E05EB6FD1A059DB800A52458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		E05EB6FF1A059DB800A52458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		E05EB7011A059EA400A52458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E05EB7031A059EB900A52458 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E05EB7041A059ED800A52458 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		993451ED1A05342C00178444 /* Roam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Roam-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -75,6 +111,7 @@
 		E05EB66D1A04B3E800A52458 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E05EB66F1A0505FB00A52458 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E05EB6F61A05620800A52458 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +149,7 @@
 		99EE4B4A1A04983500F9B7CF = {
 			isa = PBXGroup;
 			children = (
+				E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */,
 				99EE4B551A04983500F9B7CF /* Roam */,
 				99EE4B6B1A04983500F9B7CF /* RoamTests */,
 				99EE4B541A04983500F9B7CF /* Products */,
@@ -193,6 +231,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E05EB6F91A059DB800A52458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E05EB6FE1A059DB800A52458 /* Alamofire.framework */,
+				E05EB7001A059DB800A52458 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,10 +250,12 @@
 				99EE4B4F1A04983500F9B7CF /* Sources */,
 				99EE4B501A04983500F9B7CF /* Frameworks */,
 				99EE4B511A04983500F9B7CF /* Resources */,
+				E05EB7031A059EB900A52458 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E05EB7021A059EA400A52458 /* PBXTargetDependency */,
 			);
 			name = Roam;
 			productName = Roam;
@@ -261,6 +310,12 @@
 			mainGroup = 99EE4B4A1A04983500F9B7CF;
 			productRefGroup = 99EE4B541A04983500F9B7CF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E05EB6F91A059DB800A52458 /* Products */;
+					ProjectRef = E05EB6F81A059DB800A52458 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				99EE4B521A04983500F9B7CF /* Roam */,
@@ -268,6 +323,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E05EB6FE1A059DB800A52458 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E05EB6FD1A059DB800A52458 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E05EB7001A059DB800A52458 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = E05EB6FF1A059DB800A52458 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		99EE4B511A04983500F9B7CF /* Resources */ = {
@@ -319,6 +391,11 @@
 			isa = PBXTargetDependency;
 			target = 99EE4B521A04983500F9B7CF /* Roam */;
 			targetProxy = 99EE4B691A04983500F9B7CF /* PBXContainerItemProxy */;
+		};
+		E05EB7021A059EA400A52458 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = E05EB7011A059EA400A52458 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +510,7 @@
 					/Users/cwrichardkim93/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Roam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -455,6 +533,7 @@
 					/Users/cwrichardkim93/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = Roam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

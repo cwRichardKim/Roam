@@ -12,6 +12,8 @@
 	<dict>
 		<key>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</key>
 		<string>https://github.com/cwRichardKim/Roam.git</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Roam.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</key>
 		<string>../..</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../../Alamofire/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/cwRichardKim/Roam.git</string>
@@ -28,6 +32,14 @@
 	<string>33CEE2511C17DF79CC13DB40FF380D8ABA3621B0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

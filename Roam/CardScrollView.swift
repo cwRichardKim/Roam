@@ -8,7 +8,7 @@
 
 //import Cocoa
 import UIKit
-
+import AlamoFire
 
 class CardScrollView: UIScrollView, UIScrollViewDelegate {
     
@@ -21,6 +21,11 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
     
     var lastContentOffsetY:CGFloat?
     var lastContentOffsetX:CGFloat?
+    var lastContentOffSetHorizontal:CGFloat?
+    var lastHorizontalLeftSwipe = false
+    var lastPoint:CGPoint?
+    
+    var startingPoint:CGPoint?
     
     var cardsArray = [VerticalScrollView]()
     
@@ -28,6 +33,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
         super.init()
         self.delegate = self
         self.viewSetup()
+        
     }
     
     init(cards:[VerticalScrollView]) {
@@ -61,6 +67,7 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
         self.pagingEnabled = true
         self.showsHorizontalScrollIndicator = false
         self.showsVerticalScrollIndicator = false
+        startingPoint = self.frame.origin
     }
     
     func addCards(cards: [Card]) {
@@ -84,6 +91,18 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
         self.expandScrollView()
     }
     
+    
+    func removeVerticalViewAndCard(verticalScroll: VerticalScrollView) {
+        let card = verticalScroll.card
+        verticalScroll.removeFromSuperview()
+        self.contractScrollView()
+//        if let index = find(self.notes, note) {
+//            
+//        }
+//        let index = find(cardsArray, card)
+//        cardsArray.removeAtIndex(index!)
+    }
+    
     func expandScrollView() {
         var size = self.contentSize
         size.width += self.frame.size.width
@@ -91,38 +110,49 @@ class CardScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     
+    func contractScrollView() {
+        var size = self.contentSize
+        size.width -= self.frame.size.width
+        self.contentSize = size
+        
+    }
+    
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        if(lastPoint == nil) {
+            lastPoint = scrollView.frame.origin
+        }
         //scrolling left and right
         if(scrollView == self) {
-            
+            lastHorizontalLeftSwipe = self.contentOffset.x > 0.0
+            lastContentOffSetHorizontal = self.contentOffset.x
+            lastPoint = self.frame.origin
         } else { //scrolling up and down
             var scrollDirectionVerticalUp = lastContentOffsetY < self.contentOffset.y
             var scrollDirectionVerticalDown = lastContentOffsetY > self.contentOffset.y
-            self.setContentOffset(CGPoint(x: self.frame.origin.x--, y: self.frame.origin.y), animated: true)
-            var previousPage:Int = 0
-            var pageHeight = scrollView.frame.size.height
-            var fractionalPage = (scrollView.contentOffset.y/pageHeight)
-            var page:Int = Int(floor(fractionalPage))
-            if (previousPage != page) {
-                // Page has changed, do your thing!
-                // ...
-                // Finally, update previous page
-                println("PAGE TURNED")
-                previousPage = page
-            }
         }
     }
     
     
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if(scrollView == self) {
-            if (self.didCompleteUpAction()) {
-                println("SWIPED UP")
-            }
-            if(self.didCompleteDownAction()) {
-                println("SWIPED DOWN")
-            }
+        if(scrollView != self) {
+            var previousPage:Int = 0
+            var pageHeight:CGFloat = scrollView.frame.size.height
+            var y = targetContentOffset.memory.y
+            var fractionalPage = (y/pageHeight)
+            
+                if (y > (self.frame.origin.y + self.frame.size.height)) {
+                    // Page has changed, do your thing!
+                    // ...
+                    // Finally, update previous page
+                    if(lastHorizontalLeftSwipe) {
+                        self.setContentOffset(CGPoint(x:self.frame.origin.x, y: self.frame.origin.y), animated: true)
+                    } else {
+                        self.setContentOffset(CGPoint(x:self.frame.origin.x + scrollView.frame.size.width - CARD_X_BUFFER, y: self.frame.origin.y), animated: true)
+                    }
+                    self.removeVerticalViewAndCard(scrollView as VerticalScrollView)
+                }
         } else {
             
         }
